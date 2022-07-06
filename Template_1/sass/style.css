@@ -78,6 +78,72 @@ section.section-1 .container-fluid .row .col p {
   font-style: italic;
 }
 
+section.section-2 {
+  height: 100vh;
+}
+section.section-2 .col-md-6.firstCol {
+  height: 100%;
+  background: url("../img/img1.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section.section-2 .col-md-6.secondCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5.06rem;
+  background: url("../img/greenbg.png");
+}
+section.section-2 .col-md-6.secondCol h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 3rem;
+  font-size: 3rem;
+  margin: 0 1rem 4rem;
+}
+section.section-2 .col-md-6.secondCol p {
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+section.section-2 .col-md-6.secondCol button {
+  width: 40%;
+  padding: 0.4rem 0.6rem;
+  color: #292933;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  background-color: #292933;
+  outline: none;
+  border: 2px solid #292933;
+  border-radius: 1.2rem;
+  background-color: transparent;
+  transition: all 1s;
+}
+section.section-2 .col-md-6.secondCol button:hover {
+  background-color: #292933;
+  color: #fff;
+}
+
+section.section-3 {
+  height: 100vh;
+}
+
+section.section-4 .col-md-6.firstCol {
+  background: url("../img/recycle.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+section.section-6 .col-md-6.firstCol {
+  background: url("../img/cd.png") no-repeat center;
+  background-size: auto 100%;
+}
+section.section-6 p {
+  line-height: 0;
+}
+
 @media (max-width: 992px) {
   html {
     font-size: 14px;

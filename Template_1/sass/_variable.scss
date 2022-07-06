@@ -1,6 +1,7 @@
 $main_font: 'Roboto Condensed', sans-serif;
 $gr_color: #6ac17d;
 $blc_color: #2d2d4a;
+$btn-color: #292933;
 
 @mixin reset {
  margin: 0;
@@ -22,6 +23,23 @@ $blc_color: #2d2d4a;
  line-height: 1.2;
  font-size: 1.875rem;
 }
+@mixin button {
+    width: 40%;
+    padding: .4rem .6rem;
+    color: $btn-color;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    background-color: $btn-color;
+    outline: none;
+    border: 2px solid  $btn_color;
+    border-radius: 1.2rem;
+    background-color: transparent;
+    transition: all 1s;
+}
+
+
 @mixin lg {
  @media (max-width: 992px) {
   @content;
