@@ -24,8 +24,8 @@ $btn-color: #292933;
  font-size: 1.875rem;
 }
 @mixin button {
-    width: 40%;
-    padding: .4rem .6rem;
+    width: 10rem;
+    padding: 0.6rem;
     color: $btn-color;
     letter-spacing: 2px;
     text-transform: uppercase;

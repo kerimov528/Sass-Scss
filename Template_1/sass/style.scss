@@ -16,7 +16,6 @@ nav {
 }
 
 header {
- height: 100vh;
  background: url('../img/greenbg.png') no-repeat;
  background-size: cover;
  padding: 6rem 7rem;
@@ -38,7 +37,7 @@ header {
 // section 1
 
 section.section-1 {
-min-height: 48vh;
+min-height: 60vh;
 background-color: $blc_color;
 position: relative;
    .container-fluid {
@@ -77,30 +76,29 @@ position: relative;
 // section 2
 
 section.section-2 {
-    height: 100vh;
-    .col-md-6.firstCol{
-       height: 100%;
+    .firstCol{
        background: url("../img/img1.png") no-repeat;
        background-position: center;
        background-size: cover;
     }
-    .col-md-6.secondCol{
+    .secondCol{
+       height: max-content;
        display: flex;
        flex-direction: column;
        justify-content: center;
-       padding: 0 5.06rem;
-       background: url("../img/greenbg.png");
-    h2 {
+       padding: 4rem 5.06rem;
+       background: url("../img/greenbg.png") no-repeat;
+        h2 {
         @include h2Font;
         font-size: 3rem;
         margin: 0 1rem 4rem;
-    }
-    p {
+        }
+        p {
         @include pFont;
         margin-bottom: 3rem;
-    }
-    button {
-       @include button;
+        }
+        button {
+        @include button;
         &:hover {
             background-color: $btn-color;
             color: #fff;
@@ -112,28 +110,86 @@ section.section-2 {
 // section 3
 
 section.section-3 {
-    height: 100vh;
+    height: max-content;
+    .container {
+        padding: 2rem ;
+        height: 100%;
+        .firstCol {
+            height: 100vh;
+            padding: 4rem 0;
+            .img__box {
+                width: 70%;
+                height: 25rem;
+                position: relative;
+                background: url("../img/bggr.png");
+                z-index: 1;
+                img {
+                    width: 100%;
+                    height: 30rem;
+                    position: absolute;
+                    top: 13%;
+                    right: -4rem;
+                    z-index: 2;
+                    object-fit: cover;
+                }
+                .img__box_text {
+                    width: 20rem;
+                    height: 5rem;
+                    background: url("../img/bggr.png");
+                    background-position:  30% 40%;
+                    position: absolute;
+                    right: -20%;
+                    bottom: -5rem;
+                    z-index: 3;
+                    padding: 1rem;
+                }
+            }
+        }
+        .secondCol {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem; 
+            h2 {
+                @include h2Font;
+            }
+            p {
+                @include pFont;
+            }
+        }
+    }
 }
 
 // section 4
 
 section.section-4 {
-    .col-md-6.firstCol{
+    .firstCol{
        background: url("../img/recycle.png") no-repeat;
        background-size: 100% 100%;
     }
 }
 
+
 // section 6
 
 section.section-6 {
-    .col-md-6.firstCol{
+    .firstCol{
        background: url("../img/cd.png") no-repeat center;
        background-size: auto 100%;
+       background-color: $gr_color;
     }
-    p {
-        line-height: 0;
-    }
+}
+
+// footer 
+
+footer {
+    min-height: 10rem;
+    background-color: $blc_color;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @include lg {
@@ -158,6 +214,18 @@ section.section-6 {
          max-width: 70%;
         }
        }
+       section.section-2 {
+        .firstCol{
+            height: 50vh;
+        }
+    }
+    section.section-3 {
+        .container {
+            .firstCol {
+                height: 40vh;
+            }
+        }
+    }
     
 }
 @include sm {
